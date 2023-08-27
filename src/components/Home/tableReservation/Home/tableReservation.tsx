@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 
 interface HomeTableReservationProps {}
 
+
 const HomeTableReservation: FC<HomeTableReservationProps> = () => (
   <div>
     <h2>Reserve Your Tables</h2>
