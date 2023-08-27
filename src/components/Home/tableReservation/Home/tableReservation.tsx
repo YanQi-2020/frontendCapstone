@@ -1,10 +1,16 @@
 import React, { FC } from 'react';
-
+import { useNavigate} from 'react-router-dom';
 
 interface HomeTableReservationProps {}
 
 
-const HomeTableReservation: FC<HomeTableReservationProps> = () => (
+const HomeTableReservation: FC<HomeTableReservationProps> = () =>{
+  const navigate = useNavigate();
+const handleClick = () => {
+  navigate('/cart');
+};
+
+ return (
   <div>
     <h2>Reserve Your Tables</h2>
   <div>
@@ -56,9 +62,14 @@ const HomeTableReservation: FC<HomeTableReservationProps> = () => (
   </li>
 </ol>
   </div>
-  <button type="button" className="btn btn-primary mt-5">Check Out</button>
+  <button type="button" onClick={handleClick} className="btn btn-primary mt-5">
+  Check out
+</button>
+  {/* <NavLink to="/cart" /> */}
+  
   </div>
 
 );
+ }
 
 export default HomeTableReservation;
