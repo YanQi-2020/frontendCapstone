@@ -63,7 +63,7 @@ const handleClick = () => {
 </ol>
   </div>
   <button type="button" onClick={handleClick} className="btn btn-primary mt-5">
-  Check out
+  Add to Cart
 </button>
   {/* <NavLink to="/cart" /> */}
   
