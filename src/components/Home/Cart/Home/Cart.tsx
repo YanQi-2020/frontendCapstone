@@ -1,10 +1,15 @@
 import React, { FC } from 'react';
-
+import { useNavigate} from 'react-router-dom';
 
 
 interface HomeCartProps {}
 
-const HomeCart: FC<HomeCartProps> = () => (
+const HomeCart: FC<HomeCartProps> = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/payment');
+  };
+  return(
   <div>
     <h2>HomeCart Component</h2>
     <ol className="list-group list-group-numbered">
@@ -61,9 +66,12 @@ const HomeCart: FC<HomeCartProps> = () => (
     </div>
     <div><label className="form-control">100</label></div>
   </div>
-  <button type="button" className="btn btn-primary mt-5">Pay</button>
+  <button type="button" onClick={handleClick} className="btn btn-primary mt-5">
+  Pay
+</button>
   </div>
+  );
   
-);
+}
 
 export default HomeCart;
