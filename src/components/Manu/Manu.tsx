@@ -18,7 +18,7 @@ const Manu: FC<ManuProps> = () => (
           <a  href="test" className="nav-link active" aria-current="page">Home</a>
         </li>
       </ul>
-      <a href="test" className="nav-link">Cart</a>
+      <a href="/cart" className="nav-link">Cart</a>
     </div>
   </div> 
 </nav>

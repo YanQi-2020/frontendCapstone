@@ -1,12 +1,25 @@
 import React, { FC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate} from 'react-router-dom';
+import { updateSharedData } from '../../../../store';
 
 interface HomeTableReservationProps {}
 
 
 const HomeTableReservation: FC<HomeTableReservationProps> = () =>{
+
+  const sharedData = useSelector((state:any) => state.sharedData.sharedData);
+  const dispatch = useDispatch();
+  // alert(sharedData);
+  // dispatch(updateSharedData('Updated Data'));
+  // alert(sharedData);
+
+
   const navigate = useNavigate();
 const handleClick = () => {
+
+
+
   navigate('/cart');
 };
 
@@ -65,8 +78,7 @@ const handleClick = () => {
   <button type="button" onClick={handleClick} className="btn btn-primary mt-5">
   Add to Cart
 </button>
-  {/* <NavLink to="/cart" /> */}
-  
+
   </div>
 
 );

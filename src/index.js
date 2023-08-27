@@ -4,11 +4,22 @@ import './index.css';
 import App123 from './App123';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import store from './store';
+import { Provider } from 'react-redux';
+
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App123 />
+//   </Provider>,
+//   document.getElementById('root')
+// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+     <Provider store={store}>
     <App123 />
+    </Provider>
   </React.StrictMode>
 );
 
